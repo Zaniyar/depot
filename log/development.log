@@ -1,0 +1,253 @@
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20140325122910)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140325122910"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:32:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 3589ms (Views: 3530.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 13:32:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 13:32:11 +0100
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-03-25 13:32:13 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (191.0ms)
+  Rendered products/new.html.erb within layouts/application (218.0ms)
+Completed 200 OK in 226ms (Views: 225.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-03-25 13:33:42 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQD75UnLe+X3nFQJlSVi86Zg/gCSkI+sS7U+9uGfgzY=", "product"=>{"title"=>"Migros IceTea", "description"=>"IceTea das Original!", "image_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQvAez5RL3Oxy4oSGZm74V1jVDxAzBk1E2jzcrGeFezvCoyx9", "price"=>"2.00"}, "commit"=>"Create Product"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (149.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 25 Mar 2014 12:33:42 UTC +00:00], ["description", "IceTea das Original!"], ["image_url", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQvAez5RL3Oxy4oSGZm74V1jVDxAzBk1E2jzcrGeFezvCoyx9"], ["price", #<BigDecimal:3fa5ab0,'0.2E1',9(18)>], ["title", "Migros IceTea"], ["updated_at", Tue, 25 Mar 2014 12:33:42 UTC +00:00]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 159ms (ActiveRecord: 153.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 13:33:43 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:39:23 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (Invalid CSS after " }": expected "}", was ""
+  (in c:/Users/Zaniyar/Studium/Semester4/webproject/depot/app/assets/stylesheets/products.css.scss:50)):
+    2: <html>
+    3: <head>
+    4:   <title>Depot</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/products.css.scss:50
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___709160843_35024520'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:41:12 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (Invalid CSS after " }": expected "}", was ""
+  (in c:/Users/Zaniyar/Studium/Semester4/webproject/depot/app/assets/stylesheets/products.css.scss:50)):
+    2: <html>
+    3: <head>
+    4:   <title>Depot</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/products.css.scss:50
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___709160843_30559800'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 13:42:28 +0100
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-03-25 13:42:34 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (3.0ms)
+  Rendered products/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-03-25 13:43:22 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQD75UnLe+X3nFQJlSVi86Zg/gCSkI+sS7U+9uGfgzY=", "product"=>{"title"=>"Granatapfel", "description"=>"Frucht aus Bern.", "image_url"=>"http://www.hima-umweltschutz.de/wp-content/uploads/2012/09/granatapfel_21.jpeg", "price"=>"2.55"}, "commit"=>"Create Product"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 25 Mar 2014 12:43:22 UTC +00:00], ["description", "Frucht aus Bern."], ["image_url", "http://www.hima-umweltschutz.de/wp-content/uploads/2012/09/granatapfel_21.jpeg"], ["price", #<BigDecimal:3a4e830,'0.255E1',18(18)>], ["title", "Granatapfel"], ["updated_at", Tue, 25 Mar 2014 12:43:22 UTC +00:00]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-03-25 13:43:22 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 13:43:22 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-25 13:43:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 13:43:23 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 13:43:23 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 13:43:23 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-25 13:43:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 13:43:23 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:43:25 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 13:46:15 +0100
