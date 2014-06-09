@@ -1,13 +1,51 @@
+<<<<<<< HEAD
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+=======
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
 one:
   title: MyString
   description: MyText
   image_url: MyString
+<<<<<<< HEAD
+  price: 9.95
+=======
   price: 9.99
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
 two:
   title: MyString
   description: MyText
   image_url: MyString
+<<<<<<< HEAD
+  price: 9.90
+
+#START:ruby
+ruby: 
+  title:       Programming Ruby 1.9
+  description: 
+    Ruby is the fastest growing and most exciting dynamic
+    language out there.  If you need to get working programs
+    delivered fast, you should add Ruby to your toolbox.
+  price:       49.50
+  image_url:   ruby.png 
+#END:ruby
+
+zgbor: 
+  title:       ZGB & OR
+  description: 
+    bla bla bla, never pay for this
+  price:       01.00
+  image_url:   ruby.png
+  
+shitprice: 
+  title:       unter 20 chf
+  description: 
+    this germans...
+  price:       19.99
+  image_url:   ruby.png
+=======
   price: 9.99
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac

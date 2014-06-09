@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+
+<!-- START:head -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zum gluecklichen Hasen</title>
+  <%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<!-- END:head -->
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= image_tag("logo.jpg") %>
+    <%= @page_title || "zum gluecklichen Hasen!" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+<!-- START_HIGHLIGHT -->
+			<div id="cart">
+				<% if @cart %>				
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+						<%= render @cart %>
+					<% end %>
+				<% end %>
+			</div>
+
+<!-- END_HIGHLIGHT -->
+      <ul>
+        <li><a href="/store/index">Home</a></li>
+        <li><a href="/products">Produkte</a></li>
+        <li><a href="mailTo:besitzer@me.com">Contact</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,5 +51,6 @@
 <body class='<%= controller.controller_name %>'>
 <%= yield %>
 
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 </body>
 </html>

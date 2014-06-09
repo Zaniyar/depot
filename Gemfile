@@ -1,10 +1,24 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+<<<<<<< HEAD
+gem 'rails', '4.0.0'
+
+# Use sqlite3 as the database for Active Record
+group :production, :staging do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3', :require => 'sqlite3'
+end
+=======
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -20,6 +34,11 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+<<<<<<< HEAD
+# gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'jquery-ui-rails'
+=======
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -33,7 +52,11 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
+# gem 'bcrypt-ruby', '~> 3.0.0'
+=======
 # gem 'bcrypt-ruby', '~> 3.1.2'
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
 # Use unicorn as the app server
 # gem 'unicorn'

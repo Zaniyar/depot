@@ -1,11 +1,25 @@
 Depot::Application.routes.draw do
+<<<<<<< HEAD
+  resources :orders
+
+  resources :line_items
+
+  resources :carts
+
+  get "store/index", as: "store"
+=======
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
+  root 'store#index'
+=======
   # root 'welcome#index'
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -41,7 +55,11 @@ Depot::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> f74dafc0b303851eba233fb9d32a9e8da904b9ac
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
